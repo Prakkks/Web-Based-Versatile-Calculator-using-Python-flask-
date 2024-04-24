@@ -1,0 +1,75 @@
+#history
+{
+    border: none;
+    
+
+}
+
+.inp, .inp:focus
+{
+    border: none;
+    border-style: none;
+    outline: none;
+}
+
+.right
+{
+    align-items: end;
+    text-align: end;
+    
+}
+
+.main
+{
+    background-color: black;
+}
+
+
+.buttn
+{
+    
+    aspect-ratio: 2.0;
+    /* border-color: inherit; */
+   
+   
+}
+
+.color-green
+{
+    background-color: rgb(122, 143, 125);
+}
+
+.color-lime
+{
+    background-color: rgb(149, 160, 123);
+}
+
+.color-lime-dark
+{
+    background-color: rgb(116, 177, 75);
+    /* background-color: rgb(61, 62, 61); */
+
+}
+
+
+
+
+
+@media screen and (max-width: 750px) {
+   
+    
+.buttn
+{
+    
+    aspect-ratio: 1.1;
+    
+}
+
+.color-darks
+{
+    /* background-color: rgb(116, 177, 75); */
+    /* background-color: rgb(61, 62, 61); */
+    
+}
+
+  }

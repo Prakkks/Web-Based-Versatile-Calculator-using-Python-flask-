@@ -1,0 +1,90 @@
+{% extends  "index.html "%}
+
+{%block head%}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+{%endblock%}
+
+{% block mainContent%}
+
+<div class="container p-3 my-5 bg-dark text-white rounded" id="main">
+    <div class="row">  
+      <!-- <button class=" p-1 col-sm-1 rounded-circle"  type="button" id="history"> H</button> -->
+      
+    </div>
+
+    <!-- paxi change yo 456 wala div into text field  -->
+    
+    <div class="row ">
+      
+       <input  class="col-sm right h4 text-white bg-dark inp " onkeypress="clickPress(event)" id="inputbars"  value="{{data}}" placeholder="Enter something">
+    </div>
+    <div class="row">
+        <!-- <div class="col-sm-8"></div> -->
+        <div class="col-sm right h1" id="resultant" value="{{data}}" placeholder="1">  </div>
+    </div>
+   
+
+    <div class="container p-3 mt-2 main text-white rounded ">
+        <div class="row px-2">
+            <input type="button" class="buttn col-sm color-green rounded"  value="sin"  onclick="einputbar('sine')"  >
+            <input type="button" class="buttn col-sm color-green rounded"  value="(" onclick="einputbar('lpar')" >
+            <input type="button" class="buttn col-sm color-green rounded"  value=")" onclick="einputbar('rpar')">
+            <input type="button" class="buttn col-sm color-green rounded"  value="mc" >
+            <input type="button" class="buttn col-sm color-lime rounded"  value="%" onclick="einputbar('%')" >
+            <input type="button" class="buttn col-sm color-lime rounded"  value="/" onclick="inputbar('/')">
+            <input type="button" class="buttn col-sm color-lime rounded"  value="X" onclick="inputbar('*')">
+            <input type="button" class="buttn col-sm color-lime rounded"  value="BACK" onclick="einputbar('back')">
+        </div>
+        <div class="row px-2">
+            <input type="button" class=" buttn col-sm color-green rounded"  value="cos"  onclick="einputbar('cosine')">
+            <input type="button" class=" buttn col-sm color-green rounded"  value="x!"   onclick="einputbar('factorial')">
+            <input type="button" class=" buttn col-sm color-green rounded"  value="10^x" onclick="einputbar('10^x')">
+            <input type="button" class=" buttn col-sm color-green rounded"  value="m+" >
+            <input type="button" class=" buttn col-sm color-darks rounded"  value="7" onclick="inputbar(7)">
+            <input type="button" class=" buttn col-sm color-darks rounded"  value="8" onclick="inputbar(8)">
+            <input type="button" class=" buttn col-sm color-darks rounded"  value="9" onclick="inputbar(9)">
+            <input type="button" class=" buttn col-sm color-lime rounded"  value="-" onclick="inputbar('-')">
+        </div>
+        <div class="row px-2">
+            <input type="button" class=" buttn col-sm color-green rounded"  value="tan"  onclick="einputbar('tan')">
+            <input type="button" class=" buttn col-sm color-green rounded"  value="x &sup2;" onclick="einputbar('power2')">
+            <input type="button" class=" buttn col-sm color-green rounded"  value=" &pi;"  onclick="einputbar('pi')">
+            <input type="button" class=" buttn col-sm color-green rounded"  value="m-" >
+            <input type="button" class=" buttn col-sm color-darks rounded"  value="4" onclick="inputbar(4)">
+            <input type="button" class=" buttn col-sm color-darks rounded"  value="5" onclick="inputbar(5)">
+            <input type="button" class=" buttn col-sm color-darks rounded"  value="6" onclick="inputbar(6)">
+            <input type="button" class=" buttn col-sm color-lime rounded"  value="+" onclick="inputbar('+')">
+        </div>
+        <div class="row px-2">
+            <input type="button" class=" buttn col-sm color-green rounded"  value="e" onclick="inputbar('e')">
+            <input type="button" class=" buttn col-sm color-green rounded"  value="x &sup3;" onclick="einputbar('power3')" >
+            <input type="button" class=" buttn col-sm color-green rounded"  value=" &radic;"  onclick="einputbar('sqrt')" >
+            <input type="button" class=" buttn col-sm color-green rounded"  value="mr" >
+            <input type="button" class=" buttn col-sm color-darks rounded"  value="1" onclick="inputbar(1)">
+            <input type="button" class=" buttn col-sm color-darks rounded"  value="2" onclick="inputbar(2)">
+            <input type="button" class=" buttn col-sm color-darks rounded"  value="3" onclick="inputbar(3)">
+            <input type="button" class=" buttn col-sm color-lime rounded"  value="CC"  onclick="einputbar('clear')">
+        </div>
+        <div class="row px-2">
+            <input type="button" class=" buttn col-sm color-green rounded"  value="1/x" onclick="einputbar('1/x')" >
+            <input type="button" class=" buttn col-sm color-green rounded"  value="^" onclick="einputbar('^')">
+            <input type="button" class=" buttn col-sm color-green rounded"  value="log" onclick="einputbar('log')">
+            <input type="button" class=" buttn col-sm color-green rounded"  value="Ln" onclick="einputbar('ln')">
+            <input type="button" class=" buttn col-sm color-darks rounded"  value="." onclick="inputbar('.')">
+            <input type="button" class=" buttn col-sm color-darks rounded"  value="0" onclick="inputbar(0)">
+            <input type="button" class=" buttn col-sm color-lime-dark rounded"  value="=" onclick="einputbar('equal')">
+            <input type="button" class=" buttn col-sm color-lime rounded"  value="Ans" onclick="einputbar('ans')">
+        </div>
+    </div>
+
+</div>
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fraction.js/4.1.2/fraction.min.js"></script> -->
+<script src="{{ url_for('static', filename='main.js') }}" >
+  
+</script>
+
+{%endblock %}
+
